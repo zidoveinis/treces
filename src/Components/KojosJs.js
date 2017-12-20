@@ -20,7 +20,7 @@ Alert.alert(flower_name);
 
 componentDidMount() {
 
-  return fetch('https://api.myjson.com/bins/15zf37.json')
+  return fetch('https://api.myjson.com/bins/dcdvr')
     .then((response) => response.json())
     .then((responseJson) => {
       let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -71,7 +71,10 @@ render() {
         renderRow={(rowData) =>
 
        <View style={{flex:1, flexDirection: 'column'}}>
+       
             <Text style={[styles.textViewContainer]}> {rowData.PratimoName} </Text> 
+            <Text style={[styles.textViewContainer]}> {rowData.Priejimai} </Text> 
+            <Text style={[styles.textViewContainer]}> {rowData.Aprasymas} </Text> 
          { <Image source = {{ uri: rowData.image }} style={styles.imageViewContainer} /> }
        
         
@@ -99,9 +102,9 @@ paddingTop: (Platform.OS === 'android') ? 20 : 0,
 
 imageViewContainer: {
 width: '100%',
-height: 500 ,
-margin: 10,
-borderRadius : 10
+height: 200 ,
+padding: 10
+
 
 },
 
@@ -110,7 +113,7 @@ textViewContainer: {
  textAlignVertical:'center',
  width:'100%', 
  fontSize: 20,
- padding:30
+ padding:5
 
 }
 
