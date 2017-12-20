@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { AppRegistry, StyleSheet, ActivityIndicator, ListView, Text, View, Alert,Image, Platform} from 'react-native';
 
-export default class Papai extends Component {
+export default class Kojos extends Component {
 
 constructor(props) {
   super(props);
